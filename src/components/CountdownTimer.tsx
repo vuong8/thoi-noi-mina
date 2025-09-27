@@ -47,22 +47,22 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
 
   return (
     <div className="text-center animate-fade-in-up">
-      <h2 className="text-3xl md:text-4xl font-quicksand font-bold text-primary mb-8">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-quicksand font-bold text-primary mb-6 md:mb-8 px-2">
         ⏰ Đếm Ngược Đến Ngày Đặc Biệt
       </h2>
       
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto">
         {timeUnits.map(({ value, label, icon: Icon, color }, index) => (
-          <Card key={label} className="shadow-soft border-0 bg-card/80 backdrop-blur-sm hover:shadow-gentle transition-all duration-300 transform hover:scale-105">
-            <CardContent className="p-6 text-center">
-              <div className="space-y-3">
-                <Icon className={`w-8 h-8 mx-auto ${color} animate-gentle-bounce`} style={{ animationDelay: `${index * 0.1}s` }} />
+          <Card key={label} className="shadow-soft border-0 bg-card/90 backdrop-blur-sm hover:shadow-gentle transition-all duration-300 transform hover:scale-105 mx-auto w-full">
+            <CardContent className="p-4 md:p-6 text-center">
+              <div className="space-y-2 md:space-y-3">
+                <Icon className={`w-6 h-6 md:w-8 md:h-8 mx-auto ${color} animate-gentle-bounce`} style={{ animationDelay: `${index * 0.1}s` }} />
                 
                 <div className="space-y-1">
-                  <div className={`text-3xl md:text-4xl font-quicksand font-bold ${color}`}>
+                  <div className={`text-2xl md:text-3xl lg:text-4xl font-quicksand font-bold ${color}`}>
                     {value.toString().padStart(2, '0')}
                   </div>
-                  <div className="text-sm md:text-base font-nunito font-medium text-muted-foreground">
+                  <div className="text-xs md:text-sm lg:text-base font-nunito font-medium text-muted-foreground">
                     {label}
                   </div>
                 </div>
@@ -73,8 +73,8 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
       </div>
 
       {timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0 && (
-        <div className="mt-8 p-6 bg-gradient-celebration rounded-2xl shadow-gentle">
-          <p className="text-2xl font-quicksand font-bold text-primary">
+        <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-celebration rounded-2xl shadow-gentle max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl font-quicksand font-bold text-primary">
             🎉 Hôm nay là ngày đặc biệt! 🎉
           </p>
         </div>

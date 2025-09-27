@@ -102,25 +102,25 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
   };
 
   return (
-    <section className="py-16 px-4 bg-gradient-soft" id="rsvp-section">
-      <div className="container mx-auto max-w-2xl">
-        <Card className="shadow-celebration border-0 bg-card/90 backdrop-blur-md">
-          <CardHeader className="text-center pb-6">
-            <CardTitle className="text-3xl md:text-4xl font-quicksand font-bold text-primary flex items-center justify-center gap-3">
-              <Heart className="w-8 h-8 animate-gentle-bounce" />
-              Xác Nhận Tham Dự
-              <Heart className="w-8 h-8 animate-gentle-bounce" />
+    <section className="py-12 md:py-16 px-4 bg-gradient-soft" id="rsvp-section">
+      <div className="container mx-auto max-w-3xl">
+        <Card className="shadow-celebration border-0 bg-card/95 backdrop-blur-md">
+          <CardHeader className="text-center pb-4 md:pb-6">
+            <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-quicksand font-bold text-primary flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3">
+              <Heart className="w-6 h-6 md:w-8 md:h-8 animate-gentle-bounce" />
+              <span>Xác Nhận Tham Dự</span>
+              <Heart className="w-6 h-6 md:w-8 md:h-8 animate-gentle-bounce" />
             </CardTitle>
-            <p className="text-lg text-muted-foreground font-nunito mt-4">
+            <p className="text-base md:text-lg text-muted-foreground font-nunito mt-3 md:mt-4 px-2">
               Hãy cho gia đình bé {babyName} biết bạn sẽ đến chung vui nhé! 🎉
             </p>
           </CardHeader>
 
-          <CardContent className="space-y-6">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <CardContent className="space-y-4 md:space-y-6 p-4 md:p-6">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               {/* Name Field */}
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-lg font-nunito font-semibold text-primary">
+                <Label htmlFor="name" className="text-base md:text-lg font-nunito font-semibold text-primary">
                   👤 Họ và Tên *
                 </Label>
                 <Input
@@ -129,7 +129,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   placeholder="Nhập họ tên của bạn"
-                  className={`text-lg h-12 bg-background/50 border-2 focus:border-primary transition-colors ${
+                  className={`text-base md:text-lg h-12 md:h-14 bg-background/50 border-2 focus:border-primary transition-colors ${
                     errors.name ? 'border-destructive' : ''
                   }`}
                 />
@@ -140,7 +140,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
 
               {/* Phone Field */}
               <div className="space-y-2">
-                <Label htmlFor="phone" className="text-lg font-nunito font-semibold text-primary">
+                <Label htmlFor="phone" className="text-base md:text-lg font-nunito font-semibold text-primary">
                   📱 Số Điện Thoại *
                 </Label>
                 <Input
@@ -149,7 +149,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   placeholder="Nhập số điện thoại liên hệ"
-                  className={`text-lg h-12 bg-background/50 border-2 focus:border-primary transition-colors ${
+                  className={`text-base md:text-lg h-12 md:h-14 bg-background/50 border-2 focus:border-primary transition-colors ${
                     errors.phone ? 'border-destructive' : ''
                   }`}
                 />
@@ -160,8 +160,8 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
 
               {/* Guest Count Field */}
               <div className="space-y-2">
-                <Label htmlFor="guestCount" className="text-lg font-nunito font-semibold text-primary">
-                  <Users className="w-5 h-5 inline mr-2" />
+                <Label htmlFor="guestCount" className="text-base md:text-lg font-nunito font-semibold text-primary">
+                  <Users className="w-4 h-4 md:w-5 md:h-5 inline mr-2" />
                   Số Lượng Người Tham Dự *
                 </Label>
                 <Input
@@ -171,7 +171,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
                   max="10"
                   value={formData.guestCount}
                   onChange={(e) => handleInputChange('guestCount', parseInt(e.target.value) || 1)}
-                  className={`text-lg h-12 bg-background/50 border-2 focus:border-primary transition-colors ${
+                  className={`text-base md:text-lg h-12 md:h-14 bg-background/50 border-2 focus:border-primary transition-colors ${
                     errors.guestCount ? 'border-destructive' : ''
                   }`}
                 />
@@ -182,8 +182,8 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
 
               {/* Message Field */}
               <div className="space-y-2">
-                <Label htmlFor="message" className="text-lg font-nunito font-semibold text-primary">
-                  <MessageCircle className="w-5 h-5 inline mr-2" />
+                <Label htmlFor="message" className="text-base md:text-lg font-nunito font-semibold text-primary">
+                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 inline mr-2" />
                   Lời Chúc Mừng (Tùy chọn)
                 </Label>
                 <Textarea
@@ -191,7 +191,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   placeholder="Gửi lời chúc mừng đặc biệt đến bé và gia đình..."
-                  className={`min-h-[120px] text-base bg-background/50 border-2 focus:border-primary transition-colors resize-none ${
+                  className={`min-h-[100px] md:min-h-[120px] text-sm md:text-base bg-background/50 border-2 focus:border-primary transition-colors resize-none ${
                     errors.message ? 'border-destructive' : ''
                   }`}
                   maxLength={500}
@@ -208,7 +208,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-14 text-lg font-quicksand font-semibold bg-gradient-primary hover:shadow-gentle transition-all duration-300 transform hover:scale-[1.02] disabled:hover:scale-100"
+                className="w-full h-12 md:h-16 text-base md:text-lg font-quicksand font-semibold bg-gradient-primary hover:shadow-gentle transition-all duration-300 transform hover:scale-[1.02] disabled:hover:scale-100"
               >
                 {isSubmitting ? (
                   <>
@@ -217,7 +217,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5 mr-3" />
+                    <Send className="w-4 h-4 md:w-5 md:h-5 mr-3" />
                     Xác Nhận Tham Dự 🎈
                   </>
                 )}
@@ -225,8 +225,8 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
             </form>
 
             {/* Additional Info */}
-            <div className="mt-8 p-4 bg-gradient-celebration rounded-xl">
-              <p className="text-center text-sm font-nunito text-muted-foreground">
+            <div className="mt-6 md:mt-8 p-3 md:p-4 bg-gradient-celebration rounded-xl">
+              <p className="text-center text-xs md:text-sm font-nunito text-muted-foreground">
                 💡 <strong>Lưu ý:</strong> Sau khi xác nhận, chúng tôi sẽ liên hệ lại để xác nhận thông tin chi tiết
               </p>
             </div>
