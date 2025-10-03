@@ -204,24 +204,6 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ babyName }) => {
                 </p>
               </div>
 
-              {/* Submit Button */}
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full h-12 md:h-16 text-base md:text-lg font-quicksand font-semibold bg-gradient-primary hover:shadow-gentle transition-all duration-300 transform hover:scale-[1.02] disabled:hover:scale-100"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent mr-3"></div>
-                    Đang gửi...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-4 h-4 md:w-5 md:h-5 mr-3" />
-                    Xác Nhận Tham Dự 🎈
-                  </>
-                )}
-              </Button>
             </form>
 
             {/* Additional Info */}
