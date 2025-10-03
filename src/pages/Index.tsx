@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-import { Heart, Calendar, MapPin, Users, Share2, Music, Camera } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import HeroSection from '@/components/HeroSection';
 import CountdownTimer from '@/components/CountdownTimer';
 import EventDetails from '@/components/EventDetails';
-import RSVPForm from '@/components/RSVPForm';
 import PhotoGallery from '@/components/PhotoGallery';
-import ShareButtons from '@/components/ShareButtons';
 import MusicPlayer from '@/components/MusicPlayer';
 
 const Index = () => {
-  const [babyName] = useState("Minh An");
+  const [babyName] = useState("Mina");
   const [eventDate] = useState(new Date("2024-12-15T14:00:00"));
   const [location] = useState({
     name: "Nhà Hàng Tiệc Cưới Saigon Palace",
@@ -79,14 +75,8 @@ const Index = () => {
         location={location}
       />
 
-      {/* RSVP Form */}
-      <RSVPForm babyName={babyName} />
-
       {/* Photo Gallery */}
       <PhotoGallery babyName={babyName} />
-
-      {/* Share Section */}
-      <ShareButtons />
 
       {/* Footer */}
       <footer className="py-8 md:py-12 px-4 bg-gradient-celebration text-center">
