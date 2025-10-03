@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Camera, Heart, Star, ChevronLeft, ChevronRight, Upload } from 'lucide-react';
+import { Camera, Heart, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -114,21 +114,6 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ babyName }) => {
                     </div>
                   </div>
                 ))}
-              </div>
-
-              {/* Upload Section */}
-              <div className="text-center p-6 bg-gradient-soft rounded-2xl">
-                <Camera className="w-12 h-12 mx-auto text-primary mb-4" />
-                <h3 className="text-xl font-quicksand font-bold text-primary mb-2">
-                  Chia Sẻ Kỷ Niệm
-                </h3>
-                <p className="text-muted-foreground font-nunito mb-4">
-                  Hãy gửi cho chúng tôi những hình ảnh đẹp của bé {babyName}!
-                </p>
-                <Button className="bg-gradient-primary hover:shadow-gentle">
-                  <Upload className="w-4 h-4 mr-2" />
-                  Tải Ảnh Lên
-                </Button>
               </div>
             </CardContent>
           </Card>

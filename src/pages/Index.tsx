@@ -5,15 +5,14 @@ import HeroSection from '@/components/HeroSection';
 import CountdownTimer from '@/components/CountdownTimer';
 import EventDetails from '@/components/EventDetails';
 import PhotoGallery from '@/components/PhotoGallery';
-import MusicPlayer from '@/components/MusicPlayer';
 
 const Index = () => {
   const [babyName] = useState("Mina");
-  const [eventDate] = useState(new Date("2024-12-15T14:00:00"));
+  const [eventDate] = useState(new Date("2025-10-11T17:30:00"));
   const [location] = useState({
-    name: "Nhà Hàng Tiệc Cưới Saigon Palace",
-    address: "123 Đường Nguyễn Thị Minh Khai, Quận 1, TP.HCM",
-    coordinates: { lat: 10.7769, lng: 106.7009 }
+    name: "Túi Ba Gang - Sảnh Lamuse",
+    address: "Số 19 Nguyễn Du, Phường Lâm Viên, Đà Lạt",
+    coordinates: { lat: 11.9404, lng: 108.4583 }
   });
   
   return (
@@ -28,8 +27,6 @@ const Index = () => {
       <div className="absolute bottom-40 left-20 animate-sparkle">
         <div className="w-10 h-10 bg-accent-light rounded-full opacity-50"></div>
       </div>
-
-      <MusicPlayer />
       
       {/* Hero Section */}
       <HeroSection babyName={babyName} eventDate={eventDate} />
@@ -47,7 +44,7 @@ const Index = () => {
           <Card className="shadow-gentle border-0 bg-card/90 backdrop-blur-sm mx-auto">
             <CardContent className="p-6 md:p-8">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-quicksand font-bold text-primary mb-4 md:mb-6">
-                💝 Lời Mời Đặc Biệt 💝
+                💝 Trân trọng kính mời 💝
               </h2>
               <p className="text-base md:text-lg leading-relaxed text-foreground/80 font-nunito">
                 Gia đình bé <span className="font-bold text-primary">{babyName}</span> trân trọng mời 

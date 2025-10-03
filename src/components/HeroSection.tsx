@@ -1,6 +1,5 @@
 import React from 'react';
 import { Cake, Star, Gift } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import babyHero from '@/assets/baby-hero.jpg';
 
@@ -19,12 +18,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ babyName, eventDate }) => {
       hour: '2-digit',
       minute: '2-digit'
     }).format(date);
-  };
-
-  const scrollToRSVP = () => {
-    document.getElementById('rsvp-section')?.scrollIntoView({ 
-      behavior: 'smooth' 
-    });
   };
 
   return (
@@ -77,18 +70,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ babyName, eventDate }) => {
                     </p>
                   </div>
 
-                  {/* CTA Button */}
-                  <div className="pt-2 md:pt-4 animate-fade-in-up">
-                    <Button
-                      onClick={scrollToRSVP}
-                      size="lg"
-                      className="bg-gradient-primary hover:shadow-gentle transition-all duration-300 transform hover:scale-105 font-quicksand font-semibold text-base md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-2xl w-full md:w-auto"
-                    >
-                      <Heart className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-                      Xác Nhận Tham Dự
-                      <Star className="w-4 h-4 md:w-5 md:h-5 ml-2 animate-sparkle" />
-                    </Button>
-                  </div>
                 </div>
               </div>
 
@@ -124,8 +105,5 @@ const HeroSection: React.FC<HeroSectionProps> = ({ babyName, eventDate }) => {
     </section>
   );
 };
-
-// Import missing icon
-import { Heart } from 'lucide-react';
 
 export default HeroSection;

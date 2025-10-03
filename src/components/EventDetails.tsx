@@ -1,7 +1,6 @@
 import React from 'react';
-import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
+import { MapPin, Clock, Phone } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 
 interface EventDetailsProps {
   babyName: string;
@@ -30,16 +29,6 @@ const EventDetails: React.FC<EventDetailsProps> = ({ babyName, eventDate, locati
     }).format(date);
   };
 
-  const openInMaps = () => {
-    const url = `https://www.google.com/maps?q=${location.coordinates.lat},${location.coordinates.lng}`;
-    window.open(url, '_blank');
-  };
-
-  const openInZalo = () => {
-    const message = `Xin chào! Tôi muốn xác nhận tham dự tiệc thôi nôi của bé ${babyName} vào ${formatDate(eventDate)} tại ${location.name}`;
-    const zaloUrl = `https://zalo.me/0123456789?text=${encodeURIComponent(message)}`;
-    window.open(zaloUrl, '_blank');
-  };
 
   return (
     <section className="py-12 md:py-16 px-4" id="event-details">
@@ -48,7 +37,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({ babyName, eventDate, locati
           📍 Thông Tin Chi Tiết
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
+        <div className="max-w-3xl mx-auto">
           {/* Event Information */}
           <Card className="shadow-gentle border-0 bg-card/90 backdrop-blur-sm">
             <CardContent className="p-6 md:p-8">
@@ -119,43 +108,6 @@ const EventDetails: React.FC<EventDetailsProps> = ({ babyName, eventDate, locati
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8">
-                <Button
-                  onClick={openInMaps}
-                  variant="outline"
-                  className="flex-1 bg-secondary/10 hover:bg-secondary/20 border-secondary text-secondary-foreground h-12 text-sm md:text-base"
-                >
-                  <Navigation className="w-4 h-4 mr-2" />
-                  Xem Bản Đồ
-                </Button>
-                <Button
-                  onClick={openInZalo}
-                  className="flex-1 bg-gradient-primary hover:shadow-gentle h-12 text-sm md:text-base"
-                >
-                  <Phone className="w-4 h-4 mr-2" />
-                  Liên Hệ Zalo
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Google Maps Embed */}
-          <Card className="shadow-gentle border-0 bg-card/90 backdrop-blur-sm overflow-hidden">
-            <CardContent className="p-0">
-              <div className="h-full min-h-[300px] md:min-h-[400px]">
-                <iframe
-                  src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6305931741667!2d106.69831687602671!3d10.769381359496246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x674d5126513db295!2zVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1698765432109!5m2!1svi!2s`}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, borderRadius: '0' }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title={`Bản đồ địa điểm tiệc thôi nôi bé ${babyName}`}
-                  className="w-full h-full min-h-[300px] md:min-h-[400px] rounded-lg"
-                />
               </div>
             </CardContent>
           </Card>
