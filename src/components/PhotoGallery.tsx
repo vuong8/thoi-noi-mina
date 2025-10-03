@@ -2,35 +2,32 @@ import React, { useState } from 'react';
 import { Camera, Heart, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import mina1 from '@/assets/mina/att.AWu1Mi4nUuzKoLygAgeozP5sXtX6f9Nn3f8MpnJcJoA.JPG';
+import mina2 from '@/assets/mina/att.FR2ldKZU-l_o6vUS62XC-55r_bH2xCN_4lzfEftBXSw.JPG';
+import mina4 from '@/assets/mina/att.ZMt6EykkYqnGi9UJaiV-PPaUDyPCOdywFDt4eblgvTw.JPG';
 
 interface PhotoGalleryProps {
   babyName: string;
 }
 
 const PhotoGallery: React.FC<PhotoGalleryProps> = ({ babyName }) => {
-  // Sample photos - in a real app, these would come from a database
+  // Photos from local assets
   const [photos] = useState([
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      caption: `${babyName} đang ngủ ngon lành`,
+      url: mina1,
+      caption: `${babyName}`,
       likes: 15
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-      caption: `${babyName} với nụ cười đáng yêu`,
+      url: mina2, 
+      caption: `${babyName}`,
       likes: 23
     },
     {
-      id: 3,
-      url: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      caption: `${babyName} chơi đùa vui vẻ`,
-      likes: 18
-    },
-    {
       id: 4,
-      url: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      url: mina4,
       caption: `Khoảnh khắc đặc biệt của ${babyName}`,
       likes: 31
     }

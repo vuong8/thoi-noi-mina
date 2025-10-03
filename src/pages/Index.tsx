@@ -47,17 +47,17 @@ const Index = () => {
                 💝 Trân trọng kính mời 💝
               </h2>
               <p className="text-base md:text-lg leading-relaxed text-foreground/80 font-nunito">
-                Gia đình bé <span className="font-bold text-primary">{babyName}</span> trân trọng mời 
+                Gia đình bé <span className="font-bold text-primary">{babyName}</span> Gia đình bé Mina thân mến gửi lời mời đến
                 <span className="font-bold text-secondary"> Quý khách </span>
                 đến chung vui trong ngày thôi nôi đặc biệt của con. 
                 <br className="hidden md:block" />
                 <span className="block md:inline mt-2 md:mt-0">
                   <br className="hidden md:block" />
-                  Sự hiện diện của quý vị là niềm vui lớn nhất của gia đình chúng tôi! 
+                  Sự hiện diện của Quý khách chính là niềm hạnh phúc và vinh dự lớn lao đối với gia đình chúng tôi. 
                 </span>
                 <br className="hidden md:block" />
                 <span className="block mt-2 md:mt-0">
-                  Hãy cùng tạo nên những kỷ niệm tuyệt vời trong ngày đầy ý nghĩa này nhé! 🎈
+                  Hẹn gặp nhau để cùng lưu giữ những kỷ niệm ngọt ngào cùng bé! 🎈
                 </span>
               </p>
             </CardContent>
