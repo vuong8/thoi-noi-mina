@@ -33,18 +33,6 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ babyName }) => {
       url: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       caption: `Khoảnh khắc đặc biệt của ${babyName}`,
       likes: 31
-    },
-    {
-      id: 5,
-      url: "https://images.unsplash.com/photo-1518135714426-c2f1d2980ebc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      caption: `${babyName} trong vòng tay gia đình`,
-      likes: 27
-    },
-    {
-      id: 6,
-      url: "https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      caption: `${babyName} và những kỷ niệm đẹp`,
-      likes: 20
     }
   ]);
 
@@ -105,13 +93,6 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ babyName }) => {
                       />
                     </div>
                     
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-2xl flex items-center justify-center">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                        <Heart className="w-6 h-6 mx-auto mb-2" />
-                        <p className="text-sm font-nunito">{photo.likes} lượt thích</p>
-                      </div>
-                    </div>
                   </div>
                 ))}
               </div>
@@ -166,10 +147,6 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ babyName }) => {
                 <p className="text-white font-nunito text-lg">
                   {photos[currentImageIndex].caption}
                 </p>
-                <div className="flex items-center justify-center gap-2 mt-2 text-white/80">
-                  <Heart className="w-4 h-4" />
-                  <span className="text-sm">{photos[currentImageIndex].likes} lượt thích</span>
-                </div>
               </div>
 
               {/* Image counter */}
