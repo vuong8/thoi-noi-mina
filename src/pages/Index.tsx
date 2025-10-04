@@ -53,11 +53,7 @@ const Index = () => {
                 <br className="hidden md:block" />
                 <span className="block md:inline mt-2 md:mt-0">
                   <br className="hidden md:block" />
-                  Sự hiện diện của Quý khách chính là niềm hạnh phúc và vinh dự lớn lao đối với gia đình chúng tôi. 
-                </span>
-                <br className="hidden md:block" />
-                <span className="block mt-2 md:mt-0">
-                  Hẹn gặp nhau để cùng lưu giữ những kỷ niệm ngọt ngào cùng bé! 🎈
+                  Sự hiện diện của Quý khách chính là niềm hạnh phúc và vinh dự lớn lao đối với gia đình Mina. 
                 </span>
               </p>
             </CardContent>
